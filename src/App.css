@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
   color: white;
+  background: linear-gradient(45deg, #bf2323, #320af3);
 }
 
-.App-link {
-  color: #61dafb;
+.iconImg {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoList span {
+  margin-top: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Lato', sans-serif;
+}
+input:focus,
+input:hover{
+  outline: none;
+}
+.todoItems{
+  margin-top: 30px;
+}
+.itemList{
+  text-align: left;
+  position: relative;
+  padding: 8px 12px;
+  background: white;
+  color: #222;
+  margin-bottom: 5px;
+}
+.itemList:last-child{
+  margin-bottom: 0;
+}
+
+.deleteAllBtn{
+  margin-top: 20px;
+}
+button{
+  background: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
 }
