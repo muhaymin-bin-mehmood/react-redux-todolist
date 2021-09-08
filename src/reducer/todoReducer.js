@@ -5,7 +5,7 @@ const todoReducer = (state = initialData, action) => {
     switch (action.type) {
         case "ADD_TODO":
             const { id, data } = action.payload;
-            if (data && data.length > 2) {
+            if (data && data.length >= 3) {
                 return {
                     ...state,
                     list: [
