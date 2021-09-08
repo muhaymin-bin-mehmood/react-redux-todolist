@@ -5,16 +5,18 @@ const todoReducer = (state = initialData, action) => {
     switch (action.type) {
         case "ADD_TODO":
             const { id, data } = action.payload;
-            return {
-                ...state,
-                list: [
-                    ...state.list,
-                    {
-                        id,
-                        data
-                    }
-                ]
-            };
+            if (data && data.length > 2) {
+                return {
+                    ...state,
+                    list: [
+                        ...state.list,
+                        {
+                            id,
+                            data
+                        }
+                    ]
+                }
+            }
         case "DElETE_TODO":
             const newList = state.list.filter((element) => element.id !== action.id)
             return {
